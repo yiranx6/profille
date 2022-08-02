@@ -42,7 +42,7 @@ function Toolbar() {
 
     return (
        
-        <header class="outer"
+        <header key="outer"
                     className={`sticky backdrop-filter grid grid-cols-2 
                                     ${y ? "bg-white" : 'bg-none'} 
                                     ${y ? "text-black" : "text-gray-600"}
