@@ -53,14 +53,14 @@ function Toolbar() {
             <div className="flex justify-between">
             
             <div className="flex space-x-7">
-            <Link href="#" className="flex items-center py-4 px-2">
+            <a href="#" className="flex items-center py-4 px-2">
                    <div className="w-20 h-20">
                        <Alex/> 
                    </div>
                    <div className="italic text-3xl md:font-bold lg:font-extrabold lg:text-4xl ">
                        Yiran(Alex) Xu
                     </div> 
-               </Link>
+               </a>
             </div>
             <div className={`hidden md:flex items-center text-red-700 space-x-1 ${!y ? 'text-black' : 'text-gray-500' }`}>
 						<button onClick={openPDF}
@@ -92,9 +92,9 @@ function Toolbar() {
                 </Link>
                 </li>
                 <li className="space-y-2 hover:bg-slate-300 hover:font-bold ">
-                    <a href="/blogs" hidden={true} className="text-base md:text-lg lg:text-2xl">
+                    <Link href="/blogs" hidden={true} className="text-base md:text-lg lg:text-2xl">
                     Blogs
-                    </a>
+                    </Link>
                 </li> 
                 <li className="space-y-2 text-md md:text-lg lg:text-2xl hover:bg-slate-300 rounded-sm hover:font-bold">
                     <button href="" className="" onClick={openPDF}>
