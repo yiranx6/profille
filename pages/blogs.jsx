@@ -1,14 +1,9 @@
 import axios from "axios";
-
 import { useEffect, useState } from "react";
-
-
-
-function blogs({d}) {
+function Blogs({d}) {
     const [word, setWord] = useState("")
     useEffect(() => {
         setWord(d);
-        console.log(d);
         return () => {
         }
     }, [d]);
@@ -19,8 +14,4 @@ function blogs({d}) {
         </div>
     )
 }
-
-
-
-
-export default blogs
+export default Blogs

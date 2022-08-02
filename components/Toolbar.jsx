@@ -1,6 +1,6 @@
 import Alex from "./Alex"
 import Image from "next/image";
-
+import Link from 'next/link'
 import { useRouter } from "next/router"
 import {useState, useEffect} from 'react'
 const resumeLink = "https://drive.google.com/file/d/1xKuOjNmlRqGm0VVLpI0tUOsnM5ssPD6O/view?usp=sharing"
@@ -50,35 +50,35 @@ function Toolbar() {
         md:px-10 top-0 flex flex-row md:block z-50`}   
         >
             {/* <div className="relative"> */}
-            <div class="flex justify-between">
+            <div className="flex justify-between">
             
-            <div class="flex space-x-7">
-            <a href="#" class="flex items-center py-4 px-2">
+            <div className="flex space-x-7">
+            <Link href="#" className="flex items-center py-4 px-2">
                    <div className="w-20 h-20">
                        <Alex/> 
                    </div>
                    <div className="italic text-3xl md:font-bold lg:font-extrabold lg:text-4xl ">
                        Yiran(Alex) Xu
                     </div> 
-               </a>
+               </Link>
             </div>
-            <div class={`hidden md:flex items-center text-red-700 space-x-1 ${!y ? 'text-black' : 'text-gray-500' }`}>
+            <div className={`hidden md:flex items-center text-red-700 space-x-1 ${!y ? 'text-black' : 'text-gray-500' }`}>
 						<button onClick={openPDF}
 							className={`py-4 px-4 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300`}
 							>Resume</button>
 						<a  
                             hidden={true}
 							href="/blogs"
-							class="py-4 px-6 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
+							className="py-4 px-6 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
 							>Blogs</a>
 						<a
 							href="mailto:yiranxu10@gmail.com"
-							class="py-4 px-2 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
+							className="py-4 px-2 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
 							>Email Me</a>
 					</div>
                     {/* hidden mobile part */}
             </div>
-             <button class={`flex md:hidden items-center justify-end`} onClick={showBar}>
+             <button className={`flex md:hidden items-center justify-end`} onClick={showBar}>
                 {!btn ? (<Image src ='/hamberger.svg' height={20} width={20} />) 
                       :(<Image src ='/french-fries.svg' height={25} width={25} />)}
             </button>
