@@ -1,8 +1,6 @@
 module.exports = {
-  content: [ 
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: [ "./pages/**/*.{html,js,ts,jsx,tsx}",
+  "./components/**/*.{html,js,ts,jsx,tsx}",],
   theme: {
     extend: {
       backgroundImage:{
@@ -25,7 +23,6 @@ module.exports = {
       boxShadow:{
         'left':'-25px 20px 15px 10px rgb(0 0 0 /0.15)'
       }
-      
     },
   },
   plugins: [],

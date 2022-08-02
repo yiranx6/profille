@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { useRouter } from "next/router"
 import {useState, useEffect} from 'react'
-const resumeLink = "https://drive.google.com/file/d/1Pmjif9X-AtI-x5g6SWRFkSLKKN5hXc_f/view?usp=sharing"
-const rlink = "https://docs.google.com/document/d/e/2PACX-1vTmhgyEpGlfEfwMhgc-Z3-VWT51SKmcXZ9xHz5vMHPU26V-cFum0GBkIoW0RJQ3kA/pub"
+const resumeLink = "https://drive.google.com/file/d/1xKuOjNmlRqGm0VVLpI0tUOsnM5ssPD6O/view?usp=sharing"
+const rlink = "https://docs.google.com/document/d/e/2PACX-1vQpg_X7Vv_9Q0D6Jh_zHk9zVCH49XALaJ1EC8plLehDANluFbixFRoY545Q7JXm1EPq86P-t_nChP1S/pub"
 function Toolbar() {
       //construct the scroll on the top
     const [btn, setBtn] = useState(false);
@@ -109,7 +109,7 @@ function Toolbar() {
         {showPdf ? 
             (<div className="justify-center mx-auto ml-1">
                 <button className=" px-2 place-self-end font-bold hover:bg-red-600 hover:text-white bg-white" onClick={openPDF}>&#215;</button>
-                <iframe src= "/resume.pdf"
+                <iframe src = "https://docs.google.com/document/d/e/2PACX-1vQpg_X7Vv_9Q0D6Jh_zHk9zVCH49XALaJ1EC8plLehDANluFbixFRoY545Q7JXm1EPq86P-t_nChP1S/pub"
                         className="relative overflow-auto w-screen h-screen  mx-auto"></iframe>
             </div>) : (
          <div>
