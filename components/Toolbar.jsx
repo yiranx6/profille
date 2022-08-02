@@ -42,7 +42,7 @@ function Toolbar() {
 
     return (
        
-        <header classname="outer"
+        <header class="outer"
                     className={`sticky backdrop-filter grid grid-cols-2 
                                     ${y ? "bg-white" : 'bg-none'} 
                                     ${y ? "text-black" : "text-gray-600"}
@@ -66,15 +66,15 @@ function Toolbar() {
 						<button onClick={openPDF}
 							className={`py-4 px-4 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300`}
 							>Resume</button>
-						<a  
+						<Link  
                             hidden={true}
 							href="/blogs"
 							className="py-4 px-6 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
-							>Blogs</a>
-						<a
+							>Blogs</Link>
+						<Link
 							href="mailto:yiranxu10@gmail.com"
 							className="py-4 px-2 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300"
-							>Email Me</a>
+							>Email Me</Link>
 					</div>
                     {/* hidden mobile part */}
             </div>
@@ -87,9 +87,9 @@ function Toolbar() {
                 (<div className="md:hidden items-center italic text-red-700 text-bold w-screen">
                 <ul className="divide-y-2 divide-gray-400 text-base md:text-lg lg:text-2xl">
                 <li className="space-y-2 hover:bg-slate-300 rounded-sm hover:font-bold">
-                <a href="mailto:yiranxu10@gmail.com" className="text-base md:text-lg lg:text-2xl" > 
+                <Link href="mailto:yiranxu10@gmail.com" className="text-base md:text-lg lg:text-2xl" > 
                     Email Me
-                </a>
+                </Link>
                 </li>
                 <li className="space-y-2 hover:bg-slate-300 hover:font-bold ">
                     <a href="/blogs" hidden={true} className="text-base md:text-lg lg:text-2xl">
