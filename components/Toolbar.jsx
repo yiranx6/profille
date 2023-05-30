@@ -12,11 +12,11 @@ function Toolbar() {
     const [btn, setBtn] = useState(false);
     const [y, setY] = useState(false);
     const [showPdf, setShowPdf] = useState(false);
-    const toBlog = () =>{
-        router.push({
-            pathname: "/blogs"
-        })
-    }
+    // const toBlog = () =>{
+    //     router.push({
+    //         pathname: "/blogs"
+    //     })
+    // }
 
     useEffect(() => {
         window.addEventListener("scroll", (e)=>handleNavigation(e))
@@ -78,7 +78,7 @@ function Toolbar() {
                     
 						<Link
 							href="mailto:yiranxu10@gmail.com"
-							><a className={`mr-4 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300`}>Email Me</a>
+							className={`ml-4 text-md md:text-xl lg:text-2xl font-semibold rounded-3xl hover:text-blue-700 hover:bg-gray-300 transition duration-300`}> Email Me
                         </Link>
 					</div>
                     {/* hidden mobile part */}
