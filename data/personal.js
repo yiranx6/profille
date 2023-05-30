@@ -1,78 +1,81 @@
 export const personal = {
      "data": {
         id: 1,
-        title: "Personal Info and Education History",
-        image: "https://s.abcnews.com/images/US/usc-campus_hpMain_20211021-214640_16x9_992.jpg",
-        time: '2016 ~ 2022',
-        text: 'My name is Yiran Xu. Currently I am a second year Master student in University of Southern California. Starting from 2016, I started my jounery to UC Irvine. I studied in Department of Electrical Engineering with major in EECS. After serveral years study, I found that I was attractive to Computer Science and wanted to become a full-stack SDE. I took several classes during my master field in University of Southern California, Including:',
+        title: "Introduction",
+        text: 'My name is Yiran Xu. I am currently a full-time Software Engineer at 777 Partners. I have a Bachelor\'s degree in Electrical Engineering from the University of California, Irvine, and a Master\'s degree in Computer & Electrical Engineering from University of Southern California. Some coursework that I took during my college year includes ',
         classes:[
             {   
                 _id:1,
-                course: 'EE 450: ',
-                genre:'Computer Networking',
+                course: 'Java Programming, Database Management, Algorithms, Data Structure, Computer Networking, Random Processing, Information Theory, C Programming, Operating Systems, and Assembly language.',
+                genre:'',
             },
-            {   
-                _id:2,
-                course: 'CSCI 455: ',
-                genre: ' Java Programming',
-            },
-            {   
-                _id:3,
-                course: 'CSCI 570: ',
-                genre: ' Algorithm Design',
-            },
-            {   
-                _id:4,
-                course: 'CSCI 585:',
-                genre:' Database System',
-            },
+            // {   
+            //     _id:2,
+            //     course: '',
+            //     genre: '',
+            // },
+            // {   
+            //     _id:3,
+            //     course: '',
+            //     genre: '',
+            // },
+            // {   
+            //     _id:4,
+            //     course: '',
+            //     genre: '',
+            // },
             
         ]
     },
     'skills':{
-        title: 'Project Experience and Skills',
+        title: 'Skills',
         image: "https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2015/11/blog_dev-01-1.jpg",
-        time:'2021/8 ~ 2021/12',
-        text:`I participate into Prof.ajitesh Lab and help to build the COVID-19 tracking website using React.js as FrontEnd. The Backend is supported by the csv files published on Github. The website is https://scc-usc.github.io/ReCOVER-COVID-19. Althrough it is not a long-time working experience, I am glad that I had the oppertunity to handle a real-time project. 
-                My skills/experiences in software developings are:`,
+        text:`
+        I participated in Prof. Ajitesh's Lab and helped build the COVID-19 tracking website using React.js as the frontend. The backend was supported by CSV files published on GitHub. The website can be accessed at https://scc-usc.github.io/ReCOVER-COVID-19. Although it was not a long-term working experience, I am glad that I had the opportunity to work on a real-time project. Regarding my skills and experiences in software development including:`,
         classes:[
             {   
                 _id:1,
-                genre: `Backend:`,
-                tech:  `Java,JavaScript,SpringBoot,
-                        SpringCloud,Node.js,MyBatis`
+                genre: `Languages: `,
+                tech:  `Java, JavaScript, Python, HTML5/CSS, Tailwind CSS, Sass, TypeScript`
             },
             {   
                 _id:2,
-                genre:`FrontEnd:`, 
-                tech: `
-                JavaScript,React.js,React hooks,D3.js,Nivo.js,Angular(basic)`
+                genre:`Data Management: `, 
+                tech: `MySQL, PostgreSQL, Hibernate, NoSQL/MongoDB, Redis, Hazelcast, GraphQL, Neo4j
+`
             },
             {   
                 _id:3,
-                genre:`DataStorage:`,
-                tech: `
-                mySQL,MongoDB,GraphQL,Amazon S3,FireBase,Redis`
+                genre:`Backend: `,
+                tech: `Spring Boot, Spring MVC, Spring Cloud, Spring Data, Java Persistence API, AWS, Flask, Node.js, GitLab`
+
+            },
+            {   
+                _id:4,
+                genre:`Frontend/App Development/DevOps: `,
+                tech: `React.js, Angular, Android Studio, Docker, Kubernetes`
+
             },
         ]
     },
     'more':{
-        title: 'More about me ...',
-        image: "https://image.freepik.com/free-photo/female-executive-manager-team_1262-1470.jpg",
+        title: 'Hobbies',
+        // image: "https://image.freepik.com/free-photo/female-executive-manager-team_1262-1470.jpg",
         time:  '',
-        text:`Except for those technique skills, I also made strong connections with others. Friends, for me, are the most important relationship. I shared with them a lot of time on travelling and outdoor activities, and I believe they help me build amicable personality. 
-                I am in love doing:`,
+        text:`
+        Except for those technical skills, I have also built strong connections with others. Friends, for me, hold the most important place in my relationships. I have spent a lot of time with them traveling and engaging in outdoor activities, and I believe they have helped me develop an amicable personality.
+        I am in love with doing: `,
         classes:[
             {   
                 _id:1,
                 course: `Cooking:`,
-                genre:  `I borned in China and the food breed me. I love cooking food and shareing with others`
+                genre:  `I was born in China, and the food culture has played a significant role in shaping me. I have a deep love for cooking food and sharing it with others.`
             },
             {   
                 _id:2,
                 course:`jogging:`, 
                 genre: `
-                I like to spend my time on jogging near the beach, which made me feel alive`
+                    I enjoy spending my time jogging near the beach, as it makes me feel alive.`
             },
             {   
                 _id:3,

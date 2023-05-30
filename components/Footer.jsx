@@ -9,7 +9,7 @@ function Footer() {
            <div className='space-y-4 text-xs flex flex-col justify-center text-gray-800'>
                <div className=' text-base'>
                <h5 className='font-bold'>About</h5>
-               <p>Yiran Xu 2022</p>
+               <p>Yiran Xu 2023</p>
                <p>contact info:</p>
                <p>Phone 9499759197</p>
                <p>Email: yiranxu10@gmail.com</p>

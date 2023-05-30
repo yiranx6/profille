@@ -40,26 +40,26 @@ const handleNavigation = (e)=>{
         setSecondCard(false);
         setThirdCard(false);
     }
-    if(window.scrollY > 400){
+    if(window.scrollY > 20){
       setSecondCard(true);
     }
-    if(window.scrollY > 600){
+    if(window.scrollY > 400){
       setThirdCard(true);
     }
 }
 
   return (
-  <div className="overflow-none">
-    <header className="text-black top-0 bottom-0 left-0 w-full h-full">
+  <div className="flex flex-col min-h-screen overflow-none">
+    <header className="text-black top-0 bottom-0 left-0 w-full">
        <div className='place-content-center justify-center sticky z-50'> 
         </div>
     </header>
     <Toolbar 
     />
-    <video muted loop autoPlay className="absolute top-0 left-0 object-cover w-full h-2/3 md:h-4/5 lg:h-screen -z-50 flex-shrink" >
+    <video muted loop autoPlay className="absolute top-0 left-0 bottom-9 object-cover w-full h-2/3 md:h-4/5 lg:h-screen -z-50 flex-shrink" >
       <source src="/video.mp4" type="video/mp4"/>
     </video>
-    <main className="mt-5 flexplace-content-center justify-center">
+    <main className="flex-grow mt-5 flexplace-content-center justify-center">
       <div className="border-indigo-4 ">
         <div className="flex  place-content-center justify-center">
         <Image src= "/me2.jpg" className="rounded-full" width={220} height={250} ></Image>
@@ -74,7 +74,7 @@ const handleNavigation = (e)=>{
           Click to Explore
       </button>
       </div>
-      </main>
+      </main>    
       <cards className="grid grid-cols-1 flex-shrink">
       <div  ref={myRef} className="lg: self-center">
         <Transition
@@ -91,7 +91,6 @@ const handleNavigation = (e)=>{
         time={personalData.data.time}
         text={personalData.data.text}
         title ={personalData.data.title}
-        pic={personalData.data.image}
         courses= {personalData.data.classes}
         /> }
         </Transition>
@@ -135,11 +134,10 @@ const handleNavigation = (e)=>{
         </Transition>
       </div>
       </cards>
-  
-    <footer className=" mt-40 align-baseline">
+
+      <footer className=" align-baseline">
           <Footer/>
     </footer>
-          
    </div>
   )
 }
