@@ -69,12 +69,12 @@ function Toolbar() {
                         <button onClick={openPDF}
 							className={`ml-4 md:text-xl lg:text-2xl hover:bg-gray-300 rounded-md transition duration-300 hover:text-blue-700`}
 							>Resume</button>
-                        <Link  
+                        {/* <Link  
                             hidden={true}
 							href="/blogs"
                             style={{color : 'red'}}
 							><a className={`ml-4 mr-4 md:text-xl lg:text-2xl hover:bg-gray-300 rounded-md transition duration-300 hover:text-blue-700`}>Blogs </a>
-                        </Link>
+                        </Link> */}
                     
 						<Link
 							href="mailto:yiranxu10@gmail.com"
@@ -96,11 +96,11 @@ function Toolbar() {
                     Email Me
                 </Link>
                 </li>
-                <li className="space-y-2 hover:bg-slate-300 hover:font-bold ">
+                {/* <li className="space-y-2 hover:bg-slate-300 hover:font-bold ">
                     <Link href="/blogs" hidden={true} className="text-base md:text-lg lg:text-2xl">
                     Blogs
                     </Link>
-                </li> 
+                </li>  */}
                 <li className="space-y-2 text-md md:text-lg lg:text-2xl hover:bg-slate-300 rounded-sm hover:font-bold">
                     <button href="" className="" onClick={openPDF}>
                     Resume
