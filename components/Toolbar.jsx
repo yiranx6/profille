@@ -1,10 +1,7 @@
-import { red } from "@mui/material/colors";
 import Alex from "./Alex"
 import Image from "next/image";
 import Link from 'next/link'
-import { useRouter } from "next/router"
 import {useState, useEffect} from 'react'
-import PDFViewer from "./PdfViewer";
 const resumeLink = "https://drive.google.com/file/d/1xKuOjNmlRqGm0VVLpI0tUOsnM5ssPD6O/view?usp=sharing"
 const rlink = "https://docs.google.com/document/d/e/2PACX-1vQpg_X7Vv_9Q0D6Jh_zHk9zVCH49XALaJ1EC8plLehDANluFbixFRoY545Q7JXm1EPq86P-t_nChP1S/pub"
 function Toolbar() {
@@ -12,11 +9,6 @@ function Toolbar() {
     const [btn, setBtn] = useState(false);
     const [y, setY] = useState(false);
     const [showPdf, setShowPdf] = useState(false);
-    // const toBlog = () =>{
-    //     router.push({
-    //         pathname: "/blogs"
-    //     })
-    // }
 
     useEffect(() => {
         window.addEventListener("scroll", (e)=>handleNavigation(e))

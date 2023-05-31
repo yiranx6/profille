@@ -2,7 +2,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import AddCommentIcon from '@mui/icons-material/AddComment';
-function Footer() {
+   function Footer() {
     return (
         <div className='grid grid-cols-1 md:grid-cols-4 gap-y-10 px-32 py-14
         bg-gray-100 text-gray-600'>
