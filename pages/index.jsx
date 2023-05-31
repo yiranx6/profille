@@ -142,7 +142,7 @@ function Home({ data, serverDateTime }) {
 
 export async function getStaticProps() {
   try {
-    const courses = await fetch("http://localhost:3000/api/data");
+    const courses = await fetch("www.alexisxu.com/api/data");
     if (!courses.ok) {
       throw new Error("Failed to fetch data");
     }
