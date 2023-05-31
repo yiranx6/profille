@@ -2,6 +2,7 @@ export const personal = {
      "data": {
         id: 1,
         title: "Introduction",
+        image: "https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2015/11/blog_dev-01-1.jpg",
         text: 'My name is Yiran Xu. I am currently a full-time Software Engineer at 777 Partners. I have a Bachelor\'s degree in Electrical Engineering from the University of California, Irvine, and a Master\'s degree in Computer & Electrical Engineering from University of Southern California. Some coursework that I took during my college year includes ',
         classes:[
             {   
