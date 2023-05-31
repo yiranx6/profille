@@ -1,4 +1,4 @@
-export const personal = {
+const Personal = {
      "data": {
         id: 1,
         title: "Introduction",
@@ -88,3 +88,4 @@ export const personal = {
     },
 
 }
+export default Personal;

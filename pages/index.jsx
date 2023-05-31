@@ -3,21 +3,23 @@ import Time from "../components/Time"
 import CardLeft from "../components/CardLeft"
 import Footer from "../components/Footer"
 import { Transition } from '@headlessui/react'
+import Personal from '../data/personal';
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import CardRight from "../components/CardRight"
 
-function Home({ data, serverDateTime }) {
+function Home({ data }) {
   const [personalData, setPersonalData] = useState({})
   const [isShowing, setisShowing] = useState(false)
   const [secondCard, setSecondCard] = useState(false)
   const [thirdCard, setThirdCard] = useState(false)
-  const [currTime, setCurrTime] = useState(serverDateTime);
+  // const [currTime, setCurrTime] = useState(serverDateTime);
 
   const myRef = useRef(null)
 
   const clickBtn = () => {
     setisShowing(true)
+    console.log(isShowing)
     scrollToElement()
   }
 
@@ -25,12 +27,11 @@ function Home({ data, serverDateTime }) {
 
   useEffect(() => {
     setPersonalData(data)
-    setCurrTime(serverDateTime)
     window.addEventListener("scroll", handleNavigation)
     return () => {
       window.removeEventListener("scroll", handleNavigation)
     }
-  }, [personalData, currTime])
+  }, [personalData])
 
   const handleNavigation = () => {
     if (window.scrollY >= 1) {
@@ -142,17 +143,14 @@ function Home({ data, serverDateTime }) {
 
 export async function getStaticProps() {
   try {
-    const courses = await fetch("www.alexisxu.com/api/data");
-    if (!courses.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    const data = await courses.json();
-    const serverDateTime = new Date().getTime();
-
+    // const courses = await fetch("www.alexisxu.com/api/data");
+    // if (!courses.ok) {
+    //   throw new Error("Failed to fetch data");
+    // }
+    const data = Personal
     return {
       props: {
-        data,
-        serverDateTime,
+        data
       },
       revalidate: 10,
     };
