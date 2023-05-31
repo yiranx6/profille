@@ -76,8 +76,8 @@ function Toolbar() {
                     {/* hidden mobile part */}
             </div>
              <button className={`flex md:hidden items-center justify-end`} onClick={showBar}>
-                {!btn ? (<Image src ='/hamberger.svg' height={20} width={20} />) 
-                      :(<Image src ='/french-fries.svg' height={25} width={25} />)}
+                {!btn ? (<Image alt='hamberger' src ='/hamberger.svg' height={20} width={20} />) 
+                      :(<Image alt='frenchFries' src ='/french-fries.svg' height={25} width={25} />)}
             </button>
             <div >
             {btn && 

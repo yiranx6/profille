@@ -7,11 +7,12 @@ import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import CardRight from "../components/CardRight"
 
-function Home({ data }) {
+function Home({ data, serverDateTime }) {
   const [personalData, setPersonalData] = useState({})
   const [isShowing, setisShowing] = useState(false)
   const [secondCard, setSecondCard] = useState(false)
   const [thirdCard, setThirdCard] = useState(false)
+  const [currTime, setCurrTime] = useState(serverDateTime);
 
   const myRef = useRef(null)
 
@@ -24,11 +25,12 @@ function Home({ data }) {
 
   useEffect(() => {
     setPersonalData(data)
+    setCurrTime(serverDateTime)
     window.addEventListener("scroll", handleNavigation)
     return () => {
       window.removeEventListener("scroll", handleNavigation)
     }
-  }, [personalData])
+  }, [personalData, currTime])
 
   const handleNavigation = () => {
     if (window.scrollY >= 1) {
@@ -59,10 +61,10 @@ function Home({ data }) {
       <main className="flex-grow mt-5 flexplace-content-center justify-center">
         <div className="border-indigo-4 ">
           <div className="flex  place-content-center justify-center">
-            <Image src="/me2.jpg" className="rounded-full" width={220} height={250} />
+            <Image alt ="myPic" src="/me2.jpg" className="rounded-full" width={220} height={250} />
           </div>
-          <Time />
-        </div>
+          {/* <Time dateTime={currTime} /> */}       
+        </div> 
         <div className="flex first-letter:place-content-center justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 mt-8 text-white font-bold py-2 px-4 rounded-full lg:text-3xl lg:p-8 lg: m-20"
@@ -140,22 +142,25 @@ function Home({ data }) {
 
 export async function getStaticProps() {
   try {
-    const courses = await fetch('http://localhost:3000/api/data')
+    const courses = await fetch("http://localhost:3000/api/data");
     if (!courses.ok) {
-      throw new Error('Failed to fetch data')
+      throw new Error("Failed to fetch data");
     }
-    const data = await courses.json()
+    const data = await courses.json();
+    const serverDateTime = new Date().getTime();
+
     return {
       props: {
         data,
+        serverDateTime,
       },
       revalidate: 10,
-    }
+    };
   } catch (error) {
-    console.error('Error fetching data:', error)
+    console.error("Error fetching data:", error);
     return {
       notFound: true,
-    }
+    };
   }
 }
 
