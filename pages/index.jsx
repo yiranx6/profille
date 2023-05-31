@@ -65,7 +65,7 @@ function Home({ data, serverDateTime }) {
           </div>
           {/* <Time dateTime={currTime} /> */}       
         </div> 
-        <div className="flex first-letter:place-content-center justify-center">
+        <div className="flex mt-64 md:mt-32 lg:mt-28 first-letter:place-content-center justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 mt-8 text-white font-bold py-2 px-4 rounded-full lg:text-3xl lg:p-8 lg: m-20"
             onClick={clickBtn}

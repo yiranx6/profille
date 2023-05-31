@@ -26,7 +26,7 @@ function CardRight({title, text, pic, time, courses}) {
         
         {/* <!-- Card description --> */}
         <div className="w-full lg:w-3/5 lg:px-3">
-          <p className="ml-5 md:ml-10 text-md md:text-lg lg:text-xl xl:text-2xl mt-4 lg:mt-0 text-justify md:text-left">
+          <div className="ml-5 md:ml-10 text-md md:text-lg lg:text-xl xl:text-2xl mt-4 lg:mt-0 text-justify md:text-left">
           {text}
           <ul>
              {courses ? 
@@ -40,7 +40,7 @@ function CardRight({title, text, pic, time, courses}) {
              }): "loading..."
              }
           </ul>
-          </p>
+          </div>
         </div>
         {/* <!-- ./Card description --> */}
         
