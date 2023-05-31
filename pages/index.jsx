@@ -1,7 +1,7 @@
 import Toolbar from "../components/Toolbar"
 import Time from "../components/Time"
 import CardLeft from "../components/CardLeft"
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 import { Transition } from '@headlessui/react'
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
