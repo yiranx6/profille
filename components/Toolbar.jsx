@@ -31,7 +31,7 @@ function Toolbar() {
 
     const openPDF = () =>{
         setShowPdf(!showPdf);
-       
+        setY(true);
     }
 
     return (
