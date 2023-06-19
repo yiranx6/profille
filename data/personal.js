@@ -9,23 +9,7 @@ const Personal = {
                 _id:1,
                 course: 'Java Programming, Database Management, Algorithms, Data Structure, Computer Networking, Random Processing, Information Theory, C Programming, Operating Systems, and Assembly language.',
                 genre:'',
-            },
-            // {   
-            //     _id:2,
-            //     course: '',
-            //     genre: '',
-            // },
-            // {   
-            //     _id:3,
-            //     course: '',
-            //     genre: '',
-            // },
-            // {   
-            //     _id:4,
-            //     course: '',
-            //     genre: '',
-            // },
-            
+            }
         ]
     },
     'skills':{
@@ -61,7 +45,6 @@ const Personal = {
     },
     'more':{
         title: 'Hobbies',
-        // image: "https://image.freepik.com/free-photo/female-executive-manager-team_1262-1470.jpg",
         time:  '',
         text:`
         Except for those technical skills, I have also built strong connections with others. Friends, for me, hold the most important place in my relationships. I have spent a lot of time with them traveling and engaging in outdoor activities, and I believe they have helped me develop an amicable personality.

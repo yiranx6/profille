@@ -18,7 +18,7 @@ function Toolbar() {
     }, [y]);
 
     const handleNavigation = (e)=>{
-        if(window.scrollY >=1){
+        if(window.scrollY >=1 || showPdf){
             setY(true);
         }else{
             setY(false);
@@ -31,11 +31,10 @@ function Toolbar() {
 
     const openPDF = () =>{
         setShowPdf(!showPdf);
-        setY(true);
+       
     }
 
     return (
-       
         <header key="outer"
                     className={`sticky backdrop-filter grid grid-cols-2 
                                     ${y ? "bg-white" : 'bg-none'} 
@@ -52,12 +51,12 @@ function Toolbar() {
                        <Alex/> 
                     </div>
                     <div className="italic text-3xl md:font-bold lg:font-extrabold lg:text-4xl ">
-                       Yiran(Alex) Xu
+                       Yiran Xu
                     </div> 
                </a>
             </div>
 
-            <div className={`hidden md:flex text-xl items-center font-semibold  text-black-700 ${!y ? 'text-black' : 'text-gray-500' }` }>
+                    <div className={`hidden md:flex text-xl items-center font-semibold  text-black-700 ${!y ? 'text-black' : 'text-gray-500' }` }>
                         <button onClick={openPDF}
 							className={`ml-4 md:text-xl lg:text-2xl hover:bg-gray-300 rounded-md transition duration-300 hover:text-blue-700`}
 							>Resume</button>
@@ -102,21 +101,16 @@ function Toolbar() {
                 </div>)
             }
         
-        <div className="flex justify-center ml-80 md:ml-1">
-        {showPdf ? 
-            (<div className="justify-center items-center">
-                <button className=" px-2 place-self-end font-bold hover:bg-red-600 hover:text-white bg-white" onClick={openPDF}>&#215;</button>
-                <iframe 
-                title="my resume"
-                src = "https://docs.google.com/document/d/e/2PACX-1vRdSbsT7ftz9oW7OKiay169MaRXUXEWgmBDg8BcaKoBxhxiWhEyNENQpahAyuY8Ig/pub?embedded=true"
-                
-                // src = "https://drive.google.com/file/d/1IiMRmKzq6x2ypz6mCL4lUXb6q9Jro8m9/view?usp=sharing"
-                className="relative m-auto w-screen h-screen mx-auto"></iframe>
-                    {/* <PDFViewer/> */}
-            </div>) : (
-         <div>
-        </div>)} 
-        </div>
+            {showPdf ? 
+            (   <div className="w-1/2 mx-auto">
+                    <button className="flex px-2 place-self-end font-bold hover:bg-red-600 hover:text-white bg-white" onClick={openPDF}>&#215;</button>
+                    <iframe 
+                    title="my resume"
+                    src = "https://docs.google.com/document/d/e/2PACX-1vRdSbsT7ftz9oW7OKiay169MaRXUXEWgmBDg8BcaKoBxhxiWhEyNENQpahAyuY8Ig/pub?embedded=true"
+                    // src = ""
+                    className="w-screen h-screen"></iframe>
+                </div>
+                ) : (<div></div>)} 
         </div>
     </header>
         

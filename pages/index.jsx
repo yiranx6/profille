@@ -1,5 +1,4 @@
 import Toolbar from "../components/Toolbar"
-import Time from "../components/Time"
 import CardLeft from "../components/CardLeft"
 import Footer from "../components/Footer"
 import { Transition } from '@headlessui/react'
@@ -143,10 +142,6 @@ function Home({ data }) {
 
 export async function getStaticProps() {
   try {
-    // const courses = await fetch("www.alexisxu.com/api/data");
-    // if (!courses.ok) {
-    //   throw new Error("Failed to fetch data");
-    // }
     const data = Personal
     return {
       props: {
