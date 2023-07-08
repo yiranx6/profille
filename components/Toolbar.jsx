@@ -2,8 +2,6 @@ import Alex from "./Alex"
 import Image from "next/image";
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
-const resumeLink = "https://drive.google.com/file/d/1xKuOjNmlRqGm0VVLpI0tUOsnM5ssPD6O/view?usp=sharing"
-const rlink = "https://docs.google.com/document/d/e/2PACX-1vQpg_X7Vv_9Q0D6Jh_zHk9zVCH49XALaJ1EC8plLehDANluFbixFRoY545Q7JXm1EPq86P-t_nChP1S/pub"
 function Toolbar() {
       //construct the scroll on the top
     const [btn, setBtn] = useState(false);
