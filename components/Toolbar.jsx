@@ -2,6 +2,7 @@ import Alex from "./Alex"
 import Image from "next/image";
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
+const pdfUrl = '/Yiran Xu Resume_Latest.pdf';
 function Toolbar() {
       //construct the scroll on the top
     const [btn, setBtn] = useState(false);
@@ -100,13 +101,10 @@ function Toolbar() {
             }
         
             {showPdf ? 
-            (   <div className="w-1/2 mx-auto">
+            (   
+            <div className="mx-auto h-screen ">
                     <button className="flex px-2 place-self-end font-bold hover:bg-red-600 hover:text-white bg-white" onClick={openPDF}>&#215;</button>
-                    <iframe 
-                    title="my resume"
-                    src = "https://docs.google.com/document/d/e/2PACX-1vRdSbsT7ftz9oW7OKiay169MaRXUXEWgmBDg8BcaKoBxhxiWhEyNENQpahAyuY8Ig/pub?embedded=true"
-                    // src = ""
-                    className="w-screen h-screen"></iframe>
+                    <iframe src={pdfUrl} className=" flex w-full h-full"/>
                 </div>
                 ) : (<div></div>)} 
         </div>
